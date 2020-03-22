@@ -24,11 +24,15 @@ firebase login
 firebase init
 ```
 
-### Auditar ficheros antes del buil y resolver conflictos
+### Auditar ficheros antes del buil
 ```
 npm audit
 ```
+
+### Resolver conflictos
+```
 npm audit fix
+```
 
 ### Compiles and minifies for production
 ```

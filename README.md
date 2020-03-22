@@ -9,10 +9,29 @@ npm install
 ```
 npm run serve
 ```
+### Instalar firebase
+```
+npm install -g firebase-tools
+```
+
+### Login firebase
+```
+firebase login
+```
+
+### Iniciar firebase
+```
+firebase init
+```
 
 ### Compiles and minifies for production
 ```
 npm run build
+```
+
+### Hacer el deploy
+```
+firebase deploy
 ```
 
 ### Customize configuration

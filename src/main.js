@@ -36,7 +36,7 @@ import store from './store'
 
   const firebaseApp = firebase.initializeApp(firebaseConfig);
 
-  firebaseApp.firestore().settings({timestampsInSnapshots: true});
+  firebaseApp.firestore();
 
   export default firebaseApp.firestore()
   

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1 class="text-center mt-5">Lista de tareas.</h1>
+    <h1 class="text-center mt-5">Lista de tareas</h1>
    
     <div v-if="carga" class="text-center mt-5">
         <h3>Cargando contenido...</h3>

@@ -41,7 +41,7 @@ export default new Vuex.Store({
   },
   actions: {
     buscador({commit, state}, payload) {
-        console.log(payload)
+        // console.log(payload)
         state.textoBuscador = payload.toLowerCase();
     },
     crearUsuario({commit}, payload) {

@@ -1,6 +1,7 @@
 <template>
     <div>
-        <h1>Ingreso de usuario</h1>
+        <div>
+        <h1>Ingreso de usuario.</h1>
         <form @submit.prevent="ingresoUsuario({email: $v.email.$model, pass: $v.pass.$model})">
             <input type="email" v-model="$v.email.$model" class="form-control my-2" placeholder="Ingresa un email">
 
@@ -18,6 +19,11 @@
         <!-- {{$v.email}} -->
         <p v-if="error === 'auth/user-not-found' ">Usuario incorrecto.</p>
         <p v-if="error === 'auth/wrong-password' ">Contraseña incorrecta.</p>
+        </div>
+        <!-- <div>
+           <span v-if="!registro"> Ingreso </span>
+           <span v-if="registro"> Registro </span>
+        </div> -->
     </div>
 </template>
 
@@ -33,7 +39,8 @@ export default {
     data() {
         return {
             email: '',
-            pass: ''
+            pass: '', 
+            registro: false
         }
     },
     methods: {

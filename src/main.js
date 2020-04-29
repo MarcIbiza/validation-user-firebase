@@ -16,13 +16,13 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 
- var firebase = require("firebase/app");
+ const firebase = require("firebase/app");
 
  require("firebase/auth");
  require("firebase/firestore");
+ require("firebase/storage");
 
-
- var firebaseConfig = {
+ const firebaseConfig = {
   apiKey: "AIzaSyC7HztjEDiKwRaDdUI3sOLOoovIiklH9q4",
   authDomain: "crud-vue-d0b26.firebaseapp.com",
   databaseURL: "https://crud-vue-d0b26.firebaseio.com",
@@ -34,11 +34,16 @@ import store from './store'
   // Initialize Firebase
   //firebase.initializeApp(firebaseConfig);
 
-  const firebaseApp = firebase.initializeApp(firebaseConfig);
+  // const firebaseApp = firebase.initializeApp(firebaseConfig);
 
-  firebaseApp.firestore();
+  const db = firebase.initializeApp(firebaseConfig);
+  const auth = firebase.auth();
+  const storage = firebase.storage();
+ 
+   db.firestore();
 
-  export default firebaseApp.firestore()
+   export {firebase, db, auth, storage}
+   export default db.firestore()
   
   Vue.config.productionTip = false
 
